@@ -1,0 +1,73 @@
+:root {
+  --bg: #121212;
+  --card-bg: #1e1e1e;
+  --primary: #bb86fc;
+  --primary-hover: #9a63e3;
+  --secondary: #03dac6;
+  --text: #ffffff;
+  --muted: #888888;
+  --border-radius: 0.5rem;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+body {
+  background-color: var(--bg) !important;
+  color: var(--text) !important;
+}
+
+.card {
+  background-color: var(--card-bg) !important;
+  color: var(--text) !important;
+  border-radius: var(--border-radius) !important;
+  box-shadow: var(--shadow);
+  border: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.btn-primary {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover) !important;
+  border-color: var(--primary-hover) !important;
+}
+
+.navbar,
+.navbar-brand,
+.nav-link {
+  background-color: var(--card-bg) !important;
+  color: var(--text) !important;
+}
+
+.nav-link:hover {
+  color: var(--primary) !important;
+}
+
+input.form-control {
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  color: var(--text);
+}
+
+input.form-control::placeholder {
+  color: var(--muted);
+}
+
