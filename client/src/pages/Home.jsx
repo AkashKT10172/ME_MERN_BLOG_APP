@@ -17,7 +17,7 @@ function Home() {
       const params = {};
       if (searchTerm) params.search = searchTerm;
       if (tagsTerm) params.tags = tagsTerm;
-      const res = await axios.get("http://localhost:5000/api/posts", {
+      const res = await axios.get("https://me-mern-blog-app.onrender.com/api/posts", {
         params,
       });
       setPosts(Array.isArray(res.data) ? res.data : []);
@@ -47,7 +47,7 @@ function Home() {
         posts.map(async (p) => {
           try {
             const res = await axios.get(
-              `http://localhost:5000/api/posts/${p._id}/comments`
+              `https://me-mern-blog-app.onrender.com/api/posts/${p._id}/comments`
             );
             map[p._id] = Array.isArray(res.data) ? res.data : [];
           } catch {

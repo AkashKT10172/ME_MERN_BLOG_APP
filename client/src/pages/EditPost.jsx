@@ -18,7 +18,7 @@ function EditPost() {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/posts/${id}`);
+        const res = await axios.get(`https://me-mern-blog-app.onrender.com/api/posts/${id}`);
         setTitle(res.data.title);
         setContent(res.data.content);
         setTags(res.data.tags.join(', '));
@@ -69,7 +69,7 @@ function EditPost() {
     };
 
     try {
-      await axios.put(`http://localhost:5000/api/posts/${id}`, updatedData, {
+      await axios.put(`https://me-mern-blog-app.onrender.com/api/posts/${id}`, updatedData, {
         headers: {
           Authorization: `Bearer ${user.token}`,
         },

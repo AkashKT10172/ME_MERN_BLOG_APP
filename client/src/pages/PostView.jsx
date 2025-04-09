@@ -18,7 +18,7 @@ function PostView() {
     const fetchPost = async () => {
       setIsLoading(true);
       try {
-        const res = await axios.get(`http://localhost:5000/api/posts/${id}`, {
+        const res = await axios.get(`https://me-mern-blog-app.onrender.com/api/posts/${id}`, {
           headers: user ? { Authorization: `Bearer ${user.token}` } : {}
         });
         const data = {
@@ -41,7 +41,7 @@ function PostView() {
   useEffect(() => {
     const fetchComments = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/posts/${id}/comments`);
+        const res = await axios.get(`https://me-mern-blog-app.onrender.com/api/posts/${id}/comments`);
         console.log("Comments from API:", res.data);
         const validComments = Array.isArray(res.data) ? res.data.filter(comment => comment) : [];
         setComments(validComments);
@@ -56,7 +56,7 @@ function PostView() {
     if (!user) return alert('Login to like');
     try {
       await axios.post(
-        `http://localhost:5000/api/posts/${id}/like`,
+        `https://me-mern-blog-app.onrender.com/api/posts/${id}/like`,
         {},
         { headers: { Authorization: `Bearer ${user.token}` } }
       );
@@ -73,7 +73,7 @@ function PostView() {
     if (!newComment.trim()) return;
     try {
       await axios.post(
-        `http://localhost:5000/api/posts/${id}/comments`,
+        `https://me-mern-blog-app.onrender.com/api/posts/${id}/comments`,
         { text: newComment },
         { headers: { Authorization: `Bearer ${user.token}` } }
       );

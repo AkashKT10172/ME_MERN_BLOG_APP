@@ -43,7 +43,7 @@ const CreatePost = () => {
 
     try {
       await axios.post(
-        'http://localhost:5000/api/posts',
+        'https://me-mern-blog-app.onrender.com/api/posts',
         {
           title,
           content,

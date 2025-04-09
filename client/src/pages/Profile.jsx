@@ -11,7 +11,7 @@ function Profile() {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/users/me', {
+        const res = await axios.get('https://me-mern-blog-app.onrender.com/api/users/me', {
           headers: { Authorization: `Bearer ${user.token}` }
         });
         setForm({ name: res.data.name, avatar: res.data.avatar });
@@ -30,7 +30,7 @@ function Profile() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.put('http://localhost:5000/api/users/me', form, {
+      const res = await axios.put('https://me-mern-blog-app.onrender.com/api/users/me', form, {
         headers: { Authorization: `Bearer ${user.token}` }
       });
       login({ ...user, name: res.data.name, avatar: res.data.avatar });

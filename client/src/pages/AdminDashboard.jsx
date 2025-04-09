@@ -16,7 +16,7 @@ const AdminDashboard = () => {
 
     const fetchPosts = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/posts', {
+        const res = await axios.get('https://me-mern-blog-app.onrender.com/api/posts', {
           headers: {
             Authorization: `Bearer ${user.token}`,
           },
@@ -34,7 +34,7 @@ const AdminDashboard = () => {
     if (!window.confirm('Are you sure you want to delete this post?')) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/posts/${id}`, {
+      await axios.delete(`https://me-mern-blog-app.onrender.com/api/posts/${id}`, {
         headers: {
           Authorization: `Bearer ${user.token}`,
         },
