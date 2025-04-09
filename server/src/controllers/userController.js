@@ -1,5 +1,6 @@
 import Post from "../models/Post.js";
 import User from "../models/User.js";
+import Comment from '../models/commentModel.js'
 
 // In userController.js
 export const getMyPosts = async (req, res) => {
