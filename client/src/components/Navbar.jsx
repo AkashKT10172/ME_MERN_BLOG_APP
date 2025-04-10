@@ -23,7 +23,7 @@ function Navbar() {
           to="/"
           style={{ color: "var(--primary)" }}
         >
-          BIT-Blog
+          Blog-App
         </Link>
 
         <button
@@ -52,6 +52,18 @@ function Navbar() {
 
             {user ? (
               <>
+                {
+                  user.user.role === 'admin' ? 
+                  <li className="nav-item">
+                  <Link
+                    className="nav-link"
+                    to="/admin"
+                    style={{ color: "var(--text)" }}
+                  >
+                    Admin
+                  </Link>
+                </li> : <></>
+                }
                 <li className="nav-item">
                   <Link
                     className="nav-link"

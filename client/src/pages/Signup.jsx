@@ -2,6 +2,8 @@ import { useState, useContext } from 'react';
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from '../context/AuthContext';
+import { signInWithPopup } from 'firebase/auth';
+import { auth, provider } from "../firebase-config";
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -65,6 +67,26 @@ const Signup = () => {
       alert("Signup failed. Please try again.");
     } finally {
       setLoading(false);
+    }
+  };
+  const handleGoogleLogin = async () => {
+    try {
+      const result = await signInWithPopup(auth, provider);
+      const { user } = result;
+      const res = await axios.post(
+        "https://me-mern-blog-app.onrender.com/api/auth/google-login",
+        {
+          name: user.displayName,
+          email: user.email,
+          avatar: user.photoURL,
+          role: 'user'
+        }
+      );
+      login(res.data); // save token & user in context
+      navigate("/");
+    } catch (err) {
+      console.error("Google login error:", err);
+      alert("Google login failed");
     }
   };
 
@@ -131,6 +153,13 @@ const Signup = () => {
 
           <button type="submit" className="btn btn-primary w-100" disabled={loading}>
             {loading ? "Creating..." : "Sign Up"}
+          </button>
+          <button
+            type="button"
+            className="btn btn-danger mt-2 w-100"
+            onClick={handleGoogleLogin}
+          >
+            <i className="bi bi-google me-1" /> Sign in with Google
           </button>
         </form>
       </div>

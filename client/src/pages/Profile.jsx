@@ -40,7 +40,7 @@ function Profile() {
       alert('Update failed');
     }
   };
-
+  // console.log(user);
   return (
     <div className="container mt-5">
       <div
@@ -49,7 +49,7 @@ function Profile() {
       >
         <div className="text-center mb-4">
           <img
-            src={form.avatar}
+            src={user.user.avatar}
             alt="Avatar"
             className="rounded-circle border"
             style={{ width: '120px', height: '120px', objectFit: 'cover' }}
