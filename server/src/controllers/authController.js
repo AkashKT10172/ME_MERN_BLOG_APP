@@ -64,3 +64,42 @@ export const loginUser = async (req, res) => {
     res.status(500).json({ message: 'Server error' });
   }
 };
+
+export const googleLoginUser = async (req, res) => {
+  const { name, email, avatar, role } = req.body;
+
+  if (!email) {
+    return res.status(400).json({ message: 'Missing required fields' });
+  }
+
+  try {
+    let user = await User.findOne({ email });
+
+    if (!user) {
+      user = new User({
+        name,
+        email,
+        avatar,
+        role,
+        password: '12345678', // no password needed
+      });
+      await user.save();
+    }
+
+    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '7d' });
+
+    res.json({
+      token,
+      user: {
+        _id: user._id,
+        name: user.name,
+        email: user.email,
+        avatar: user.avatar,
+        role:'user'
+      },
+    });
+  } catch (err) {
+    console.error('Google login error:', err);
+    res.status(500).json({ message: 'Something went wrong' });
+  }
+};
