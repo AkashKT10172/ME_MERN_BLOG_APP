@@ -1,3 +1,4 @@
+// CRIO_SOLUTION_START_MODULE_ONE
 import { useEffect, useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import axios from 'axios';
@@ -49,7 +50,7 @@ function Profile() {
       >
         <div className="text-center mb-4">
           <img
-            src={user.user.avatar}
+            src={form.avatar}
             alt="Avatar"
             className="rounded-circle border"
             style={{ width: '120px', height: '120px', objectFit: 'cover' }}
@@ -105,3 +106,4 @@ function Profile() {
 }
 
 export default Profile;
+// CRIO_SOLUTION_END_MODULE_ONE

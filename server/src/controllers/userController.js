@@ -1,3 +1,4 @@
+// CRIO_SOLUTION_START_MODULE_ONE
 import Post from "../models/Post.js";
 import User from "../models/User.js";
 import Comment from '../models/commentModel.js'
@@ -50,8 +51,6 @@ export const getUserProfile = async (req, res) => {
 // Private: get current user
 export const getMyProfile = async (req, res) => {
   try {
-    console.log('getMyProfile: req.user =', req.user);
-
     // Check if user exists
     if (!req.user || !req.user._id) {
       return res.status(401).json({ message: 'User not authenticated' });
@@ -90,3 +89,4 @@ export const updateMyProfile = async (req, res) => {
     avatar: user.avatar,
   });
 };
+// CRIO_SOLUTION_END_MODULE_ONE

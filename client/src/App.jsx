@@ -1,3 +1,4 @@
+// CRIO_SOLUTION_START_MODULE_ONE
 // src/App.jsx
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
@@ -32,3 +33,5 @@ function App() {
 }
 
 export default App;
+
+// CRIO_SOLUTION_END_MODULE_ONE

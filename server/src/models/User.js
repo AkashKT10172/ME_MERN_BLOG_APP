@@ -1,3 +1,4 @@
+// CRIO_SOLUTION_START_MODULE_ONE
 import mongoose from 'mongoose';
 import bcrypt from 'bcryptjs';
 
@@ -53,3 +54,4 @@ userSchema.methods.matchPassword = async function (enteredPassword) {
 
 const User = mongoose.model('User', userSchema);
 export default User;
+// CRIO_SOLUTION_END_MODULE_ONE

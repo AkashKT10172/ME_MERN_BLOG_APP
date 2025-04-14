@@ -1,3 +1,4 @@
+// CRIO_SOLUTION_START_MODULE_ONE
 import User from '../models/User.js';
 import jwt from 'jsonwebtoken';
 
@@ -89,7 +90,6 @@ export const googleLoginUser = async (req, res) => {
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '7d' });
 
     res.json({
-      token,
       user: {
         _id: user._id,
         name: user.name,
@@ -97,9 +97,11 @@ export const googleLoginUser = async (req, res) => {
         avatar: user.avatar,
         role:'user'
       },
+      token
     });
   } catch (err) {
     console.error('Google login error:', err);
     res.status(500).json({ message: 'Something went wrong' });
   }
 };
+// CRIO_SOLUTION_END_MODULE_ONE

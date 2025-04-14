@@ -1,3 +1,4 @@
+// CRIO_SOLUTION_START_MODULE_ONE
 import { createContext, useState, useEffect, useContext } from "react";
 
 export const AuthContext = createContext();
@@ -27,3 +28,4 @@ export const AuthProvider = ({ children }) => {
 
 // ✅ Add this line:
 export const useAuth = () => useContext(AuthContext);
+// CRIO_SOLUTION_END_MODULE_ONE

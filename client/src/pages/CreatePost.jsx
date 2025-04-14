@@ -1,3 +1,4 @@
+// CRIO_SOLUTION_START_MODULE_ONE
 import { useState, useContext } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -75,6 +76,7 @@ const CreatePost = () => {
           <div className="mb-3">
             <label className="form-label">Title</label>
             <input
+              name="title"
               className="form-control"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
@@ -85,6 +87,7 @@ const CreatePost = () => {
           <div className="mb-3">
             <label className="form-label">Content</label>
             <textarea
+              name="content"
               className="form-control"
               rows="5"
               value={content}
@@ -96,6 +99,7 @@ const CreatePost = () => {
           <div className="mb-3">
             <label className="form-label">Tags (comma-separated)</label>
             <input
+              name="tags"
               className="form-control"
               value={tags}
               onChange={(e) => setTags(e.target.value)}
@@ -129,3 +133,4 @@ const CreatePost = () => {
 };
 
 export default CreatePost;
+// CRIO_SOLUTION_END_MODULE_ONE

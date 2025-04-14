@@ -1,3 +1,4 @@
+// CRIO_SOLUTION_START_MODULE_ONE
 import Post from '../models/Post.js';
 
 // @desc    Create a new post
@@ -153,5 +154,4 @@ export const likeOrUnlikePost = async (req, res) => {
     res.status(500).json({ message: 'Failed to toggle like', error: err.message });
   }
 };
-
-
+// CRIO_SOLUTION_END_MODULE_ONE

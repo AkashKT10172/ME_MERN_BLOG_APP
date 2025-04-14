@@ -1,3 +1,4 @@
+// CRIO_SOLUTION_START_MODULE_ONE
 import express from 'express';
 import {
   createPost,
@@ -13,13 +14,14 @@ import { optionalAuth } from '../middleware/authMiddleware.js';
 const router = express.Router();
 
 // Public
-router.get('/', getAllPosts);
-router.get('/:id', optionalAuth, getPostById);
+router.get('/', getAllPosts); // done
+router.get('/:id', optionalAuth, getPostById); // done
 
 // Protected
-router.post('/', protect, createPost);
-router.put('/:id', protect, updatePost);
-router.delete('/:id', protect, deletePost);
-router.post('/:id/like', protect, likeOrUnlikePost);
+router.post('/', protect, createPost); // done
+router.put('/:id', protect, updatePost); // done
+router.delete('/:id', protect, deletePost); // done
+router.post('/:id/like', protect, likeOrUnlikePost); // done
 
 export default router;
+// CRIO_SOLUTION_END_MODULE_ONE

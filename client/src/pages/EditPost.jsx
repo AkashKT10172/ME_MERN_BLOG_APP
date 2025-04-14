@@ -1,3 +1,4 @@
+// CRIO_SOLUTION_START_MODULE_ONE
 import { useState, useEffect, useContext } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -93,6 +94,7 @@ function EditPost() {
           <div className="mb-3">
             <label className="form-label">Title</label>
             <input
+              name = "title"
               className="form-control"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
@@ -103,6 +105,7 @@ function EditPost() {
           <div className="mb-3">
             <label className="form-label">Content</label>
             <textarea
+              name = "content"
               className="form-control"
               value={content}
               onChange={(e) => setContent(e.target.value)}
@@ -114,6 +117,7 @@ function EditPost() {
           <div className="mb-3">
             <label className="form-label">Tags (comma-separated)</label>
             <input
+              name = "tags"
               className="form-control"
               value={tags}
               onChange={(e) => setTags(e.target.value)}
@@ -153,3 +157,4 @@ function EditPost() {
 }
 
 export default EditPost;
+// CRIO_SOLUTION_END_MODULE_ONE

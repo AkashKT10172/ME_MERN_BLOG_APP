@@ -1,3 +1,4 @@
+// CRIO_SOLUTION_START_MODULE_ONE
 // src/firebase.js
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
@@ -16,3 +17,4 @@ const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
 export { auth, provider, signInWithPopup };
+// CRIO_SOLUTION_END_MODULE_ONE

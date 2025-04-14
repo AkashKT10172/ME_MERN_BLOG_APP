@@ -1,3 +1,4 @@
+// CRIO_SOLUTION_START_MODULE_ONE
 import mongoose from 'mongoose';
 
 const connectDB = async () => {
@@ -15,3 +16,4 @@ const connectDB = async () => {
 };  
 
 export default connectDB;
+// CRIO_SOLUTION_END_MODULE_ONE

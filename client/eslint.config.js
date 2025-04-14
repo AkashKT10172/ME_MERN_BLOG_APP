@@ -1,3 +1,4 @@
+// CRIO_SOLUTION_START_MODULE_ONE
 import js from '@eslint/js'
 import globals from 'globals'
 import reactHooks from 'eslint-plugin-react-hooks'
@@ -31,3 +32,4 @@ export default [
     },
   },
 ]
+// CRIO_SOLUTION_END_MODULE_ONE

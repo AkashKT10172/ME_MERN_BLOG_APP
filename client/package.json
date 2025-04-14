@@ -1,10 +1,12 @@
+# CRIO_SOLUTION_AND_STUB_ONLY_START_MODULE_ONE
+# CRIO_SOLUTION_AND_STUB_ONLY_END_MODULE_ONE
 {
   "name": "client",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "start": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"

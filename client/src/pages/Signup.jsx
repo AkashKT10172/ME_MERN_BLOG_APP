@@ -1,3 +1,4 @@
+// CRIO_SOLUTION_START_MODULE_ONE
 import { useState, useContext } from 'react';
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -159,7 +160,7 @@ const Signup = () => {
             className="btn btn-danger mt-2 w-100"
             onClick={handleGoogleLogin}
           >
-            <i className="bi bi-google me-1" /> Sign in with Google
+            <i className="bi bi-google me-1" /> Sign Up with Google
           </button>
         </form>
       </div>
@@ -168,3 +169,4 @@ const Signup = () => {
 };
 
 export default Signup;
+// CRIO_SOLUTION_END_MODULE_ONE

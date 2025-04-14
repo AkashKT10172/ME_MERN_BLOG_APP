@@ -1,3 +1,4 @@
+// CRIO_SOLUTION_START_MODULE_ONE
 import mongoose from 'mongoose';
 
 const postSchema = new mongoose.Schema(
@@ -42,3 +43,4 @@ const postSchema = new mongoose.Schema(
 );
 
 export default mongoose.model('Post', postSchema);
+// CRIO_SOLUTION_END_MODULE_ONE

@@ -1,3 +1,4 @@
+// CRIO_SOLUTION_START_MODULE_ONE
 import { useState, useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
@@ -70,6 +71,7 @@ function Login() {
             </label>
             <input
               type="email"
+              name = "email"
               className="form-control"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -84,6 +86,7 @@ function Login() {
             </label>
             <input
               type="password"
+              name="password"
               className="form-control"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -104,7 +107,7 @@ function Login() {
             className="btn btn-danger mt-2 w-100"
             onClick={handleGoogleLogin}
           >
-            <i className="bi bi-google me-1" /> Sign in with Google
+            <i className="bi bi-google me-1" /> Login with Google
           </button>
         </form>
       </div>
@@ -113,3 +116,4 @@ function Login() {
 }
 
 export default Login;
+// CRIO_SOLUTION_END_MODULE_ONE

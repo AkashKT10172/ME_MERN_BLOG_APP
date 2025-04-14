@@ -1,3 +1,4 @@
+// CRIO_SOLUTION_START_MODULE_ONE
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
@@ -14,7 +15,7 @@ function Navbar() {
 
   return (
     <nav
-      className="navbar navbar-expand-lg px-4"
+      className="nav navbar navbar-expand-lg px-4"
       style={{ backgroundColor: "var(--card-bg)" }}
     >
       <div className="container-fluid">
@@ -23,7 +24,7 @@ function Navbar() {
           to="/"
           style={{ color: "var(--primary)" }}
         >
-          Blog-App
+          Blog App
         </Link>
 
         <button
@@ -126,3 +127,4 @@ function Navbar() {
 }
 
 export default Navbar;
+// CRIO_SOLUTION_END_MODULE_ONE

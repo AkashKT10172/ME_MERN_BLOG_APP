@@ -1,3 +1,4 @@
+// CRIO_SOLUTION_START_MODULE_ONE
 import express from 'express';
 import cors from 'cors';
 import authRoutes from './routes/authRoutes.js';
@@ -22,3 +23,4 @@ app.get('/', (req, res) => {
 });
 
 export default app;
+// CRIO_SOLUTION_END_MODULE_ONE

@@ -1,3 +1,4 @@
+// CRIO_SOLUTION_START_MODULE_ONE
 import Comment from '../models/commentModel.js';
 
 export const addComment = async (req, res) => {
@@ -47,3 +48,4 @@ export const deleteComment = async (req, res) => {
     res.status(500).json({ message: 'Failed to delete comment', error: err.message });
   }
 };
+// CRIO_SOLUTION_END_MODULE_ONE

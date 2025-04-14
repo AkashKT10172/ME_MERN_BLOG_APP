@@ -1,3 +1,4 @@
+// CRIO_SOLUTION_START_MODULE_ONE
 import express from 'express';
 import { registerUser, loginUser, googleLoginUser } from '../controllers/authController.js';
 
@@ -13,3 +14,4 @@ router.post('/login', loginUser);
 router.post('/google-login', googleLoginUser);
 
 export default router;
+// CRIO_SOLUTION_END_MODULE_ONE

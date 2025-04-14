@@ -1,3 +1,4 @@
+// CRIO_SOLUTION_START_MODULE_ONE
 import mongoose from 'mongoose';
 
 const commentSchema = new mongoose.Schema({
@@ -20,3 +21,4 @@ const commentSchema = new mongoose.Schema({
 });
 
 export default mongoose.model('Comment', commentSchema);
+// CRIO_SOLUTION_END_MODULE_ONE

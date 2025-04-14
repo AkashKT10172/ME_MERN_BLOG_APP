@@ -1,3 +1,4 @@
+// CRIO_SOLUTION_START_MODULE_ONE
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
@@ -12,3 +13,4 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     </AuthProvider>
   </React.StrictMode>
 );
+// CRIO_SOLUTION_END_MODULE_ONE

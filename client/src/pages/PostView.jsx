@@ -1,3 +1,4 @@
+// CRIO_SOLUTION_START_MODULE_ONE
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
@@ -142,12 +143,13 @@ function PostView() {
           <div className="input-group mt-4">
             <input
               type="text"
+              name="comment"
               className="form-control"
               placeholder="Add a comment..."
               value={newComment}
               onChange={(e) => setNewComment(e.target.value)}
             />
-            <button className="btn btn-success" onClick={handleComment}>Post</button>
+            <button className="btn btn-success" onClick={handleComment}>Add Comment</button>
           </div>
         ) : (
           <p className="text mt-3">Login to leave a comment.</p>
@@ -158,3 +160,5 @@ function PostView() {
 }
 
 export default PostView;
+
+// CRIO_SOLUTION_END_MODULE_ONE
